@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffella — Меню</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#ffffff; --text:#1B2621; --accent:#C2C5A6; --muted:#6b6f69; --radius:16px; --shadow:0 6px 20px rgba(27,38,33,.08); }
+    *{ box-sizing:border-box }
+    body{ margin:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif }
+    .container{ width:min(1100px,92vw); margin:0 auto }
+    .brandbar{ background:var(--accent) }
+    .brandbar .inner{ display:grid; place-items:center; padding:14px 0 }
+    .brandbar .logo-img{ height:56px; display:block }
+    .hero{ padding:22px 0 24px }
+    .slogan{ text-align:center; font-weight:700; letter-spacing:.06em; text-transform:uppercase }
+    .anchors{ margin-top:22px }
+    .anchors .row{ display:flex; justify-content:center; gap:24px; flex-wrap:wrap }
+    .chip{ min-width:160px; display:flex; align-items:center; justify-content:center; height:56px; padding:0 20px; border-radius:999px; border:2px solid var(--accent); text-decoration:none; color:var(--text); font-weight:600; line-height:1.2 }
+    section{ padding:28px 0 }
+    h2{ font-size:clamp(22px,2.6vw,30px); font-weight:700; margin:0 0 12px }
+    .sub{ color:var(--muted); font-size:14px; letter-spacing:.06em; text-transform:uppercase; margin:0 0 12px }
+    .grid{ display:grid; gap:16px }
+    .grid-2{ grid-template-columns:1fr }
+    @media(min-width:860px){ .grid-2{ grid-template-columns:1fr 1fr } }
+    .card{ position:relative; background:#fff; border:1px solid rgba(27,38,33,.08); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; z-index:1 }
+    h3{ margin:0 0 10px; font-weight:500 }
+    .menu-list{ display:grid }
+    .item{ display:grid; grid-template-columns:1fr auto; grid-template-rows:auto auto; row-gap:8px; align-items:baseline; padding:18px 0; border-bottom:1px dashed rgba(27,38,33,.18) }
+    .item:last-child{ border-bottom:0 }
+    .name{ font-weight:500 }
+    .price{ justify-self:end; font-variant-numeric:tabular-nums }
+    .meta{ color:var(--muted); font-size:14px; line-height:1.35 }
+    .bright{ background:var(--accent); border-top:1px solid rgba(27,38,33,.06); border-bottom:1px solid rgba(27,38,33,.06) }
+    .iced-banner{ text-align:center; margin:8px 0 16px; font-weight:600; text-transform:uppercase; letter-spacing:.06em }
+    .food-grid{ display:grid; gap:0 }
+    .food-item{ border-bottom:1px dashed rgba(27,38,33,.18); padding:18px 0 }
+    .food-item:last-child{ border-bottom:0 }
+    .food-head{ display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:8px }
+    .food-name{ font-weight:500; text-transform:uppercase; letter-spacing:.02em }
+    .food-price{ font-variant-numeric:tabular-nums }
+    .badges{ display:flex; gap:6px; margin-top:6px }
+    .badge{ font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid rgba(27,38,33,.15) }
+    footer{ padding:34px 0 60px }
+    .ig{ display:inline-flex; padding:8px; border-radius:999px; border:1px solid rgba(27,38,33,.18) }
+    .ig svg{ width:28px; height:28px; display:block }
+  </style>
+</head>
+<body>
+  <div class="brandbar">
+    <div class="container inner">
+      <div class="brand-logo">
+        <img class="logo-img" src="assets/Logotype.svg" alt="Coffella">
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="slogan">КОРНЕР КОФЕ &amp; ЗДОРОВОЙ ЕДЫ</div>
+      <div class="anchors">
+        <div class="row">
+          <a class="chip" href="#coffee">Кофе</a>
+          <a class="chip" href="#tea">Чаи &amp; Лимонады</a>
+          <a class="chip" href="#food">Еда</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coffee">
+    <div class="container">
+      <h2>Кофейные напитки</h2>
+      <div class="sub">NOT JUST COFFEE. A RITUAL.</div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Горячее</h3>
+          <div class="menu-list">
+            <div class="item"><div class="name">ЭСПРЕССО</div><div class="price">1000</div><div class="meta"></div></div>
+            <div class="item"><div class="name">АМЕРИКАНО</div><div class="price">1100 / 1300</div><div class="meta">250мл / 350мл</div></div>
+            <div class="item"><div class="name">КАПУЧИНО</div><div class="price">1300 / 1500 / 1700</div><div class="meta">250/350/450мл</div></div>
+            <div class="item"><div class="name">ЛАТТЕ</div><div class="price">1400 / 1600</div><div class="meta">350/450мл</div></div>
+            <div class="item"><div class="name">ФЛЭТ УАЙТ</div><div class="price">1400</div><div class="meta">250мл</div></div>
+            <div class="item"><div class="name">КАКАО</div><div class="price">1500</div><div class="meta">350мл</div></div>
+            <div class="item"><div class="name">ГОРЯЧИЙ ШОКОЛАД</div><div class="price">1500</div><div class="meta">350мл</div></div>
+            <div class="item"><div class="name">ЗЕЛЕНАЯ МАТЧА</div><div class="price">1500</div><div class="meta">350мл</div></div>
+            <div class="item"><div class="name">ГОЛУБАЯ МАТЧА</div><div class="price">2000</div><div class="meta">350мл</div></div>
+            <div class="item"><div class="name">АЭРОКАНО</div><div class="price">1200</div><div class="meta"></div></div>
+            <div class="item"><div class="name">КОРТАДО</div><div class="price">1400</div><div class="meta"></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Холодное</h3>
+          <div class="menu-list">
+            <div class="item"><div class="name">АЙС ЛАТТЕ</div><div class="price">1900</div><div class="meta">400мл</div></div>
+            <div class="item"><div class="name">АЙС КАПУЧИНО</div><div class="price">1700</div><div class="meta">400мл</div></div>
+            <div class="item"><div class="name">АЙС АМЕРИКАНО</div><div class="price">1400</div><div class="meta">400мл</div></div>
+            <div class="item"><div class="name">АЙС МАТЧА ЗЕЛЁНАЯ</div><div class="price">2000</div><div class="meta">400мл</div></div>
+            <div class="item"><div class="name">АЙС МАТЧА ГОЛУБАЯ</div><div class="price">2500</div><div class="meta">400мл</div></div>
+            <div class="item"><div class="name">БАМБЛ КОФЕ</div><div class="price">2500</div><div class="meta">400мл</div></div>
+            <div class="item"><div class="name">АФОГАТО</div><div class="price">2500</div><div class="meta"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3>Допы</h3>
+        <div class="menu-list">
+          <div class="item" style="grid-template-rows:auto"><div class="name">АЛЬТЕРНАТИВНОЕ МОЛОКО</div><div class="price">500</div></div>
+          <div class="item" style="grid-template-rows:auto"><div class="name">СИРОП</div><div class="price">200</div></div>
+          <div class="item" style="grid-template-rows:auto"><div class="name">ДЕКАФ</div><div class="price">200</div></div>
+          <div class="item" style="grid-template-rows:auto"><div class="name">МОЛОКО</div><div class="price">200</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tea" class="bright">
+    <div class="container">
+      <h2 style="text-align:center">Чаи &amp; Лимонады &amp; Смузи</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Чай</h3>
+          <div class="menu-list">
+            <div class="item"><div class="name">ОБЛЕПИХОВЫЙ ЧАЙ</div><div class="price">1500</div><div class="meta">350мл</div></div>
+            <div class="item"><div class="name">МАРОККАНСКИЙ ЧАЙ</div><div class="price">1500</div><div class="meta">350мл</div></div>
+            <div class="item"><div class="name">ЯГОДНЫЙ ЧАЙ</div><div class="price">1500</div><div class="meta">350мл</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Смузи</h3>
+          <div class="menu-list">
+            <div class="item"><div class="name">МАНГО‑МАРАКУЙЯ</div><div class="price">2000</div><div class="meta">400мл</div></div>
+            <div class="item"><div class="name">КИВИ‑ЯБЛОКО‑ШПИНАТ</div><div class="price">2000</div><div class="meta">400мл</div></div>
+            <div class="item"><div class="name">ЯГОДНЫЙ</div><div class="price">2000</div><div class="meta">400мл</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="iced-banner">YES, IT’S ICED. AND YES, IT’S PERFECT.</div>
+      <div class="card">
+        <h3>Лимонад</h3>
+        <div class="menu-list">
+          <div class="item"><div class="name">КИВИ ЦИТРУС</div><div class="price">2000</div><div class="meta"></div></div>
+          <div class="item"><div class="name">ЯГОДНЫЙ МИКС</div><div class="price">2000</div><div class="meta"></div></div>
+          <div class="item"><div class="name">МАНГО‑МАРАКУЙЯ</div><div class="price">2000</div><div class="meta"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="food">
+    <div class="container">
+      <h2>Еда (здоровые перекусы)</h2>
+      <div class="food-grid">
+        <article class="food-item" data-tags="vegan">
+          <div class="food-head"><div class="food-name">Morning Glow</div><div class="food-price">2000</div></div>
+          <div class="meta">— Льняная каша (Лен, миндальное молоко)</div>
+          <div class="meta">351 ккал • Белки 11,7 • Жиры 28,1 • Углеводы 12,3</div>
+          <div class="badges"><span class="badge">🌱 Vegan</span></div>
+        </article>
+        <article class="food-item" data-tags="vegan">
+          <div class="food-head"><div class="food-name">Golden Porridge</div><div class="food-price">1500</div></div>
+          <div class="meta">— Каша пшённая (Пшено, миндальное молоко, масло гхи, джем)</div>
+          <div class="meta">251 ккал • Белки 5,5 • Жиры 7,9 • Углеводы 41,3</div>
+          <div class="badges"><span class="badge">🌱 Vegan</span></div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Double Egg</div><div class="food-price">1000</div></div>
+          <div class="meta">— Белковый перекус (2 отварных куриных яйца с зеленью)</div>
+          <div class="meta">159 ккал • Белки 16 • Жиры 11,1 • Углеводы 1,5</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Green Power Bowl</div><div class="food-price">3000</div></div>
+          <div class="meta">— Боул с брокколи (Микс салат, скрембл, брокколи, черри, оливки, лимонный соус)</div>
+          <div class="meta">295 ккал • Белки 22,8 • Жиры 20,5 • Углеводы 1,5</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Corn &amp; Cheese Club</div><div class="food-price">3000</div></div>
+          <div class="meta">— Клаб-сэндвич с кукурузой (Тост хлеб, кукурузная паста, сыр моцарелла, куриное филе)</div>
+          <div class="meta">523 ккал • Белки 38,8 • Жиры 22,5 • Углеводы 41,3</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Garden Club</div><div class="food-price">3000</div></div>
+          <div class="meta">— Клаб-сэндвич с огурцом (Тост хлеб, микс салат, огурцы, куриное филе, сыр моцарелла)</div>
+          <div class="meta">396 ккал • Белки 34,1 • Жиры 14,6 • Углеводы 32,2</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Fresh Wrap</div><div class="food-price">3000</div></div>
+          <div class="meta">— Врап с курицей (Курица, красная капуста, зелень, лаваш)</div>
+          <div class="meta">353 ккал • Белки 30 • Жиры 6 • Углеводы 46</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Matcha Bliss</div><div class="food-price">3000</div></div>
+          <div class="meta">— Гранола с зелёной матчей (Греческий йогурт, зелёная матча, зелёное яблоко, гранола)</div>
+          <div class="meta">229 ккал • Белки 13,4 • Жиры 7,2 • Углеводы 30,6</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Blue Bliss</div><div class="food-price">3000</div></div>
+          <div class="meta">— Чиа-пудинг (Чиа, голубая матча, греческий йогурт, кокосовое молоко)</div>
+          <div class="meta">280 ккал • Белки 15 • Жиры 18,7 • Углеводы 16</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Coffella Waffle</div><div class="food-price">2000</div></div>
+          <div class="meta">— Творожная вафля (Творог, яйцо, безглютеновая мука)</div>
+          <div class="meta">186 ккал • Белки 21 • Жиры 4,5 • Углеводы 16</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Protein Snack</div><div class="food-price">1200</div></div>
+          <div class="meta">— Протеиновые печеньки (Орехи, финики, протеин)</div>
+          <div class="meta">477 ккал • Белки 24,1 • Жиры 31,5 • Углеводы 37,6</div>
+        </article>
+        <article class="food-item" data-tags="vegan">
+          <div class="food-head"><div class="food-name">Energy Bar</div><div class="food-price">3000</div></div>
+          <div class="meta">— Ореховый батончик (Орехи, финики, масло какао, какао)</div>
+          <div class="meta">354 ккал • Белки 8 • Жиры 22,6 • Углеводы 37,6</div>
+          <div class="badges"><span class="badge">🌱 Vegan</span></div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Фирменный панини с кониной</div><div class="food-price">3000</div></div>
+          <div class="meta">— Панини, творожный сыр, корнишоны, конина вяленая, горчица, терияки, фирменный соус</div>
+          <div class="meta">843 ккал • Белки 35,5 • Жиры 39,1 • Углеводы 50,6</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Фирменный панини с индейкой</div><div class="food-price">3000</div></div>
+          <div class="meta">— Панини, творожный сыр, песто, вяленые помидоры, оливки, индейка, фирменный соус</div>
+          <div class="meta">728 ккал • Белки 29,3 • Жиры 43,3 • Углеводы 54,3</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Джем без сахара</div><div class="food-price">500</div></div>
+          <div class="meta">12 ккал</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Творожный соус</div><div class="food-price">500</div></div>
+          <div class="meta">51 ккал • Белки 0,9 • Жиры 5,1 • Углеводы 0,6</div>
+        </article>
+        <article class="food-item">
+          <div class="food-head"><div class="food-name">Veggy Bun</div><div class="food-price">600</div></div>
+          <div class="meta">— Чечевичная булочка (Яблоко, чечевица, псиллиум, закваска, кориандр, соль)</div>
+          <div class="meta">110 ккал • Белки 6 • Жиры 1,5 • Углеводы 17</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a class="ig" href="https://www.instagram.com/coffella.healthyfood/" target="_blank" rel="noopener" aria-label="Instagram Coffella">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.25" y="2.25" width="19.5" height="19.5" rx="4.5" stroke="#1B2621" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="4.25" stroke="#1B2621" stroke-width="1.5"/>
+          <circle cx="17.35" cy="6.65" r="1.25" fill="#1B2621"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
